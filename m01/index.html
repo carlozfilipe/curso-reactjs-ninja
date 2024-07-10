@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso ReactJS Ninja - Módulo #01</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <!-- Script tags para adicionar o ReactJS na aplicação -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+
+    <!-- Script tag do babel para compilar JS e também JSX para que o browser "entenda"  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+    <script type="text/babel">
+      
+    /*  
+     Criando elementos com o React.createElement 
+
+     var ex1 = React.createElement('h1', null, [React.createElement(
+      'h3',
+      null,
+      React.createElement(
+        'p',
+        null,
+        'Elemento p criado pelo React.createElement'
+      )
+      ), React.createElement('h2', null, 'H2 ao lado do h3')]); 
+
+      ReactDOM.render(ex1,  document.getElementById('app'));
+    */
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+    /*  
+      Criando elementos com o React.DOM  
+
+      var ex2 = React.DOM.h1(null, [React.DOM.p(
+      null,
+      React.DOM.span(
+        null,
+        'Elemento span criado pelo React.DOM'
+      )
+      ), React.DOM.strong(
+      null, 'Elemento strong criado pelo React.DOM'
+      )]); 
+
+      ReactDOM.render(ex2,  document.getElementById('app'));
+    */
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+    /* 
+      O JSX é uma forma mais visual de escrever React.createElement, portanto, ele precisa ser compilado 
+      antes de renderizar para que ele se transforme na função React.createElement e possa ser renderizado
+      no DOM. E a ferramenta que "traduz" (ou seja, que compila) é o babel.
+    */
+    
+    /* ReactDOM.render(
+      <h1>Elemento h1 criado pelo JSX</h1>,
+      document.getElementById('app')
+    ); */
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+    /*
+      Criando componentes com React.createClass()
+    */
+
+    var Title = React.createClass({
+      render: function() {
+        return (
+          <div>
+            <h1>Componente Title criado pelo <em>React.createClass()</em></h1>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consectetur inventore itaque hic, molestiae nobis incidunt harum reprehenderit cum ullam dolor, necessitatibus ab sint delectus unde repellendus, autem natus ratione!</p>
+          </div>
+        );
+      }
+    });
+
+    ReactDOM.render(
+      <Title />, 
+      document.getElementById('app')
+    );
+
+    </script>
+  </body>
+</html>
