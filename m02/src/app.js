@@ -1,11 +1,11 @@
 'use strict';
 
-var React = require('react');
+import React from 'react';
 
 var Title = React.createClass({
-  render: function() {
-    return React.createElement('h1', null, 'Título com React.createElement')
-  }
-})
+  render: function () {
+    return <h1>Título gerado com JSX!</h1>;
+  },
+});
 
 export default Title;
