@@ -4,5 +4,7 @@ import React from 'react';
 import Button from './button';
 
 const LikeButton = () => (
-  <Button>{Like}</Button>
-)
+  <Button handleClick={() => console.log('BOTÃO LIKE')}>Like</Button>
+);
+
+export default LikeButton;
