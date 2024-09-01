@@ -2,6 +2,10 @@
 
 import React from 'react';
 
+/**
+ * @param {string} color - Cor do quadrado (ex: red, blue, green).
+ */
+
 const Square = ({ color }) => (
   <div
     style={{
@@ -16,16 +20,4 @@ Square.defaultProps = {
   color: 'red',
 };
 
-const RenderSquare = () => (
-  <div
-    onClick={(e) => {
-      alert('clicou na div');
-    }}
-  >
-    {['blue', 'yellow', 'black', 'blue'].map((square, index) => (
-      <Square key={index} color={square} />
-    ))}
-  </div>
-);
-
-export default { Square, RenderSquare };
+export default Square;
